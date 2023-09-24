@@ -1,0 +1,299 @@
+{
+	"info": {
+		"_postman_id": "32f784f3-76a7-4748-97fa-a4735ab71f83",
+		"name": "API Gateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13738050"
+	},
+	"item": [
+		{
+			"name": "Get Quiz - Question Service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[6,5]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/question-service/question/getQuestions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"question-service",
+						"question",
+						"getQuestions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Quiz - Quiz Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/quiz-service/quiz/get/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"quiz-service",
+						"quiz",
+						"get",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Score - Question Service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"id\": \"6\",\r\n        \"response\":\"8\" \r\n    },\r\n    {\r\n        \"id\": \"5\",\r\n        \"response\":\"4\" \r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/question-service/question/getScore",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"question-service",
+						"question",
+						"getScore"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Categorywise Questions - Question Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/question-service/question/category/java",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"question-service",
+						"question",
+						"category",
+						"java"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Questions - Question Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/question-service/question/allQuestions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"question-service",
+						"question",
+						"allQuestions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Question - Question Service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"questionTitle\": \"Byte data type is of byte?\",\r\n        \"option1\": \"16\",\r\n        \"option2\": \"2\",\r\n        \"option3\": \"1\",\r\n        \"option4\": \"8\",\r\n        \"rightAnswer\": \"1\",\r\n        \"difficultylevel\": \"EASY\",\r\n        \"category\": \"JAVA\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/question-service/question/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"question-service",
+						"question",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Quiz - Question Service",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/question-service/question/generate?category=JAVA&noOfQuestions=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"question-service",
+						"question",
+						"generate"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "JAVA"
+						},
+						{
+							"key": "noOfQuestions",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Question - Question Service Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"questionTitle\": \"Byte data type is of byte?\",\r\n        \"option1\": \"16\",\r\n        \"option2\": \"2\",\r\n        \"option3\": \"1\",\r\n        \"option4\": \"8\",\r\n        \"rightAnswer\": \"1\",\r\n        \"difficultylevel\": \"EASY\",\r\n        \"category\": \"JAVA\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/question-service/question/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"question-service",
+						"question",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Quiz - Quiz Service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"category\":\"JAVA\",\r\n    \"noOfQuestions\":2,\r\n    \"title\":\"JSpring1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/quiz-service/quiz/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"quiz-service",
+						"quiz",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Quiz  - Quiz Service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"id\": \"6\",\r\n        \"response\":\"8\" \r\n    },\r\n    {\r\n        \"id\": \"5\",\r\n        \"response\":\"4\" \r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/quiz-service/quiz/submit/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"quiz-service",
+						"quiz",
+						"submit",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
